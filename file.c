@@ -11,10 +11,11 @@ char *read_file(char *filename)
 
 	if (filename == NULL)
 		return(0);
-
+//Aqui abrimos el archivo que le pasamos en el argv (test)
 	op = open(filename, O_RDONLY);
 	if (op == -1)
 		return (0);
+//Aqui leemos el archivo
 	rd = read(op, c, 1024);
 	if (rd == -1)
 	{
@@ -22,8 +23,8 @@ char *read_file(char *filename)
 		close(op);
 		return(0);
 	}
-
-
+//Aqui escribimos en el STDOUT pero no se necesita hacer
+//Esta parte solo es para testear!!!!
 	wr = write(STDOUT_FILENO, c, rd);
 
 	if (wr == -1 || wr != rd)
