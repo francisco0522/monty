@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "monty.h"
 /**
  * file - returns (0)
  * @argv: char argv
@@ -6,7 +6,7 @@
  */
 char *read_file(char *filename)
 {
-	int op, rd, wr;
+	int op, rd;
 	char *c = malloc(1024);
 
 	if (filename == NULL)
@@ -23,7 +23,8 @@ char *read_file(char *filename)
 		close(op);
 		return(0);
 	}
-//Aqui escribimos en el STDOUT pero no se necesita hacer
+	write_file(c, rd);
+/*Aqui escribimos en el STDOUT pero no se necesita hacer
 //Esta parte solo es para testear!!!!
 	wr = write(STDOUT_FILENO, c, rd);
 
@@ -33,6 +34,7 @@ char *read_file(char *filename)
 		close(op);
 		return (0);
 	}
+*/
 	free(c);
 	close(op);
 	return (0);

@@ -37,5 +37,16 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+typedef struct global
+{
+	char *num;
+	char *buffer;
+	FILE *file;
+} ss;
+
+extern ss sup;
+
 char *read_file(char *filename);
+char *write_file(char *txt, int text);
 #endif /* HOLBERTON_H */
