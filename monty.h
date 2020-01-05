@@ -1,14 +1,13 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef _MONTY_H
+#define _MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
 #include <string.h>
-#include <stdio.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <errno.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -62,4 +61,4 @@ void pop(stack_t **head, unsigned int line_number);
 void nop(stack_t **top, unsigned int line_number);
 void swap(stack_t **head, unsigned int line_number);
 
-#endif /* HOLBERTON_H */
+#endif /* _MONTY_H */
