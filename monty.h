@@ -58,7 +58,7 @@ void functions(stack_t **stack, unsigned int cont, char *function);
 void push(stack_t **head, unsigned int count);
 void pall(stack_t **h, unsigned int count);
 void pop(stack_t **head, unsigned int line_number);
-void nop(stack_t **top, unsigned int line_number);
+void _nop(stack_t **head, unsigned int line_number);
 void swap(stack_t **head, unsigned int line_number);
 
 #endif /* _MONTY_H */
