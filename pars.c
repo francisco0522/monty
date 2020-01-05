@@ -1,16 +1,17 @@
 #include "monty.h"
 /**
- * file - returns (0)
- * @argv: char argv
- * Return: Always 0.
+ * write_file - write_file
+ * @txt: char txt
+ * @stack: stack_t stack
+ * @cont: int cont
  */
-void write_file(char *txt, stack_t **h, unsigned int count)
+void write_file(char *txt, stack_t **stack, unsigned int cont)
 {
-	char *str, *token;
+	char *text, *token;
 
-	str = strtok(txt, " \n\t");
+	text = strtok(txt, " \n\t");
 	token = strtok(NULL, " \n\t");
-	sup.num = token;
-	if (str && str[0] != '#')
-		get_op_func(h, count, str);
+	s.number = token;
+	if (text && text[0] != '#')
+		functions(stack, cont, text);
 }

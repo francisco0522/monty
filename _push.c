@@ -15,19 +15,19 @@ void _push(stack_t **h, unsigned int count)
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{dprintf(STDERR_FILENO, "USAGE: monty file\n");
-		free_stack(new);
+		free_s(new);
 		exit(EXIT_FAILURE); }
 
-	if (!sup.num && sup.num != 0)
+	if (!s.number && s.number != 0)
 	{dprintf(STDERR_FILENO, "L%u: usage: push integer\n", count);
-		free_stack((*h));
+		free_s((*h));
 		free(new);
 		exit(EXIT_FAILURE);
 	}
 
-	if (sup.num)
+	if (s.number)
 	{
-		new->n = atoi(sup.num);
+		new->n = atoi(s.number);
 		new->next = *h;
 		new->prev = NULL;
 		if (*h)
@@ -36,7 +36,7 @@ void _push(stack_t **h, unsigned int count)
 	}
 	else
 	{dprintf(STDERR_FILENO, "L%u: usage: push integer\n", count);
-		free_stack((*h));
+		free_s((*h));
 		free(new);
 		exit(EXIT_FAILURE); }
 }

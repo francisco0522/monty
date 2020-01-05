@@ -20,9 +20,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 /**
  * struct instruction_s - opcode and its function
@@ -34,33 +34,29 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
-typedef struct global
+/**
+ * struct str - str
+ * @number: char number
+ * @data: char data
+ * @f: FILE f
+ */
+typedef struct str
 {
-	char *num;
-	char *buffer;
-	FILE *file;
-} ss;
+	char *number;
+	char *data;
+	FILE *f;
+} strs;
 
-extern ss sup;
+extern strs s;
 
-char *read_file(char *filename);
+void read_file(char *filename);
 void write_file(char *txt, stack_t **h, unsigned int count);
-
-//michelllllllllll estuvo aqui xD
-
-void pharser(char *buffer, stack_t **h, unsigned int count);
-void get_op_func(stack_t **h, unsigned int count, char *command);
+void free_s(stack_t *h);
+void functions(stack_t **stack, unsigned int cont, char *function);
 void _push(stack_t **head, unsigned int count);
-void free_stack(stack_t *h);
-void _add(stack_t **h, unsigned int count);
 void _pall(stack_t **h, unsigned int count);
-void _pint(stack_t **h, unsigned int count);
-void _pop(stack_t **head, unsigned int line_number);
-void _nop(stack_t **h, unsigned int count);
-// hasta aqui xD
 
 #endif /* HOLBERTON_H */

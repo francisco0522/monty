@@ -1,32 +1,29 @@
 #include "monty.h"
+strs s = {NULL, NULL, NULL};
 /**
- * file - returns (0)
- * @argv: char argv
- * Return: Always 0.
+ * read_file - read_file
+ * @filename: char filename
  */
-char *read_file(char *filename)
+void read_file(char *filename)
 {
-	int op, rd, count = 5;
-	char *c = malloc(1024);
+	unsigned int cont = 0;
+	ssize_t rd;
+	size_t size = 0;
 	stack_t *stack = NULL;
 
-	if (filename == NULL)
-		return(0);
-//Aqui abrimos el archivo que le pasamos en el argv (test)
-	op = open(filename, O_RDONLY);
-	if (op == -1)
-		return (0);
-//Aqui leemos el archivo
-	rd = read(op, c, 1024);
-	if (rd == -1)
-	{
-		free(c);
-		close(op);
-		return(0);
+	s.f = fopen(filename, "r");
+	if (!s.f)
+	{dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
+		exit(EXIT_FAILURE);
 	}
-	while (rd != -1)
-		write_file(c, &stack, count);
-	free(c);
-	close(op);
-	return (0);
+
+	while ((rd = getline(&s.data, &size, s.f)) != EOF)
+	{
+		cont++;
+		write_file(s.data, &stack, cont);
+
+	}
+	fclose(s.f);
+	free_s(stack);
+	exit(EXIT_SUCCESS);
 }
