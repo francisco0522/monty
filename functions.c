@@ -19,6 +19,8 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 
 	while (cm[i].opcode)
 	{
+		if (strcmp(cm, "nop") == 0)
+			break;
 		if ((strcmp(cm[i].opcode, function)) == 0)
 		{
 			cm[i].f(stack, cont);
