@@ -13,7 +13,8 @@ void read_file(char *filename)
 
 	s.f = fopen(filename, "r");
 	if (!s.f)
-	{dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
 
@@ -23,7 +24,6 @@ void read_file(char *filename)
 		write_file(s.data, &stack, cont);
 
 	}
-	fclose(s.f);
 	free_s(stack);
 	exit(EXIT_SUCCESS);
 }

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "monty.h"
 /**
- *  _pall - function that prints all the elements of a dlist
+ * pall - function that prints all the elements of a dlist
  * @h : const - list_t
  * @count: count.
  * Return: the number of notes.

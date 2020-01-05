@@ -27,7 +27,8 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 		i++;
 	}
 	if (cm[i].f == NULL)
-	{dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", cont, function);
+	{
+		dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", cont, function);
 		exit(EXIT_FAILURE);
 	}
 

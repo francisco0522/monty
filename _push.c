@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "monty.h"
 /**
- * _push - Funtionces of the opcode push.
+ * push - Funtionces of the opcode push.
  * @h: Stack.
  * @count: count of the line where the opcode is taken.
  * Return: Void
