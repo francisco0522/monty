@@ -56,7 +56,10 @@ void read_file(char *filename);
 void write_file(char *txt, stack_t **h, unsigned int count);
 void free_s(stack_t *h);
 void functions(stack_t **stack, unsigned int cont, char *function);
-void _push(stack_t **head, unsigned int count);
-void _pall(stack_t **h, unsigned int count);
+void push(stack_t **head, unsigned int count);
+void pall(stack_t **h, unsigned int count);
+void pop(stack_t **head, unsigned int line_number);
+void nop(stack_t **top, unsigned int line_number);
+void swap(stack_t **head, unsigned int line_number);
 
 #endif /* HOLBERTON_H */

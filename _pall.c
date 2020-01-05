@@ -8,7 +8,7 @@
  * @count: count.
  * Return: the number of notes.
  */
-void _pall(stack_t **h, unsigned int count)
+void pall(stack_t **h, unsigned int count)
 {
 	stack_t *temp;
 
