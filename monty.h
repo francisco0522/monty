@@ -60,5 +60,7 @@ void pall(stack_t **h, unsigned int count);
 void pop(stack_t **head, unsigned int line_number);
 void _nop(stack_t **head, unsigned int line_number);
 void swap(stack_t **head, unsigned int line_number);
+void _pint(stack_t **head, unsigned int line_number);
+void _add(stack_t **head, unsigned int line_number);
 
 #endif /* _MONTY_H */
