@@ -59,7 +59,7 @@ void free_stack(stack_t *h);
 void _add(stack_t **h, unsigned int count);
 void _pall(stack_t **h, unsigned int count);
 void _pint(stack_t **h, unsigned int count);
-void _pop(stack_t **h, unsigned int count);
+void _pop(stack_t **head, unsigned int line_number);
 void _nop(stack_t **h, unsigned int count);
 // hasta aqui xD
 
