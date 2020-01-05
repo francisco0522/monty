@@ -48,5 +48,19 @@ typedef struct global
 extern ss sup;
 
 char *read_file(char *filename);
-char *write_file(char *txt, int text);
+void write_file(char *txt, stack_t **h, unsigned int count);
+
+//michelllllllllll estuvo aqui xD
+
+void pharser(char *buffer, stack_t **h, unsigned int count);
+void get_op_func(stack_t **h, unsigned int count, char *command);
+void _push(stack_t **head, unsigned int count);
+void free_stack(stack_t *h);
+void _add(stack_t **h, unsigned int count);
+void _pall(stack_t **h, unsigned int count);
+void _pint(stack_t **h, unsigned int count);
+void _pop(stack_t **h, unsigned int count);
+void _nop(stack_t **h, unsigned int count);
+// hasta aqui xD
+
 #endif /* HOLBERTON_H */

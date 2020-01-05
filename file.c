@@ -6,8 +6,9 @@
  */
 char *read_file(char *filename)
 {
-	int op, rd;
+	int op, rd, count = 5;
 	char *c = malloc(1024);
+	stack_t *stack = NULL;
 
 	if (filename == NULL)
 		return(0);
@@ -23,18 +24,8 @@ char *read_file(char *filename)
 		close(op);
 		return(0);
 	}
-	write_file(c, rd);
-/*Aqui escribimos en el STDOUT pero no se necesita hacer
-//Esta parte solo es para testear!!!!
-	wr = write(STDOUT_FILENO, c, rd);
-
-	if (wr == -1 || wr != rd)
-	{
-		free(c);
-		close(op);
-		return (0);
-	}
-*/
+	while (rd != -1)
+		write_file(c, &stack, count);
 	free(c);
 	close(op);
 	return (0);

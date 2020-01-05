@@ -1,4 +1,5 @@
 #include "monty.h"
+ss sup = {NULL, NULL, NULL};
 /**
  * main - returns (0)
  * @argc: int argc

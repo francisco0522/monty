@@ -4,25 +4,13 @@
  * @argv: char argv
  * Return: Always 0.
  */
-char *write_file(char *txt, int text)
+void write_file(char *txt, stack_t **h, unsigned int count)
 {
-	char *str;
-	//char *token;
-	//int wr;
+	char *str, *token;
 
 	str = strtok(txt, " \n\t");
-	//token = strtok(NULL, " \n\t");
+	token = strtok(NULL, " \n\t");
+	sup.num = token;
 	if (str && str[0] != '#')
-	{
-		printf("%s\n", str);
-		printf("%d\n", text);
-	}
-	/*wr = write(STDOUT_FILENO, token, text);
-
-	if (wr == -1 || wr != text)
-	{
-		return (0);
-	}
-*/
-	return (0);
+		get_op_func(h, count, str);
 }
