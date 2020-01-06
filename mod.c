@@ -24,7 +24,7 @@ void modMonty(stack_t **head, unsigned int line_number)
 
 	temp = *head;
 	*head = (*head)->next;
-	(*head)->n /= temp->n;
+	(*head)->n %= temp->n;
 	(*head)->prev = NULL;
 	free(temp);
 }
