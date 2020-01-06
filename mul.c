@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * mul - mul the top  the stack.
+ * mulMonty - mul the top  the stack.
  * @head: double pointer to head of the stack.
  * @line_number: counter for line number.
  * Return: void.
  */
-void mul(stack_t **head, unsigned int line_number)
+void mulMonty(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp;
 

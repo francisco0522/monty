@@ -16,7 +16,7 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 		{"pop", pop},
 		{"pint", pint},
 		{"add", add},
-		{"mul", mul},
+		{"mul", mulMonty},
 		{"sub", sub},
 		{"div", divMonty},
 		{"mod", modMonty},

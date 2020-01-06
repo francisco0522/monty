@@ -63,7 +63,7 @@ void swap(stack_t **head, unsigned int line_number);
 void pint(stack_t **head, unsigned int line_number);
 void add(stack_t **head, unsigned int line_number);
 void sub(stack_t **head, unsigned int line_number);
-void mul(stack_t **head, unsigned int line_number);
+void mulMonty(stack_t **head, unsigned int line_number);
 void divMonty(stack_t **head, unsigned int line_number);
 void modMonty(stack_t **head, unsigned int line_number);
 #endif /* _MONTY_H */
