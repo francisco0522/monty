@@ -12,10 +12,10 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 	instruction_t cm[] = {
 		{"push", push},
 		{"pall", pall},
-                {"swap", swap},
+		{"swap", swap},
 		{"pop", pop},
 		{"pint", pint},
-                {"add", add},
+		{"add", add},
 		{"nop", nop},
 		{NULL, NULL}
 	};
