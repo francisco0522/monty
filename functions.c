@@ -12,8 +12,8 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 	instruction_t cm[] = {
 		{"push", push},
 		{"pall", pall},
-		{"pint", pint},
 		{"pop", pop},
+		{"pint", pint},
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
@@ -24,7 +24,7 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 	{
 		if (strcmp(cm[i].opcode, "nop") == 0)
 			break;
-		if ((strcmp(cm[i].opcode, function)) == 0)
+		else if ((strcmp(cm[i].opcode, function)) == 0)
 		{
 			cm[i].f(stack, cont);
 			break;
