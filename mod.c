@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mod - mod the top  the stack.
+ * modMonty - mod the top  the stack.
  * @head: double pointer to head of the stack.
  * @line_number: counter for line number.
  * Return: void.
@@ -20,7 +20,7 @@ void modMonty(stack_t **head, unsigned int line_number)
 	{
 		dprintf(STDERR_FILENO, "L%d: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
-	}	
+	}
 
 	temp = *head;
 	*head = (*head)->next;
