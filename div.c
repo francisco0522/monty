@@ -6,7 +6,7 @@
  * @line_number: counter for line number.
  * Return: void.
  */
-void div(stack_t **head, unsigned int line_number)
+void divMonty(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp;
 
@@ -16,11 +16,11 @@ void div(stack_t **head, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if (head->next->next)
-		head = head->next;
-	if (head->next->n == 0)
+	if ((*head)->next->next)
+		(*head) = (*head)->next;
+	if ((*head)->next->n == 0)
 	{
-		dprintf(STDERR_FILENO, "L%d: division by zero\n", ln);
+		dprintf(STDERR_FILENO, "L%d: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}	
 
