@@ -13,8 +13,10 @@ void pint(stack_t **head, unsigned int line_number)
 
 	if (*head == NULL)
 	{
-		dprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", line_number);
+		fprintf(STDERR_FILENO, "L%d: can't pint, stack empty\n", line_number);
+		free_s(*head);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", current->n);
+	else
+		printf("%d\n", current->n);
 }
