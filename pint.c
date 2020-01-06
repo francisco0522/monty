@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _pint - prints of the stack
+ * pint - prints of the stack
  * @head: double pointer  head of the stack.
  * @line_number: counter for line number of the file.
  *
