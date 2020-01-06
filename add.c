@@ -6,7 +6,7 @@
  * @line_number: counter for line number.
  * Return: void.
  */
-void _add(stack_t **head, unsigned int line_number)
+void add(stack_t **head, unsigned int line_number)
 {
 	stack_t *temp;
 

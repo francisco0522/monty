@@ -7,7 +7,7 @@
  *
  * Return: void.
  */
-void _pint(stack_t **head, unsigned int line_number)
+void pint(stack_t **head, unsigned int line_number)
 {
 	stack_t *current = *head;
 
