@@ -16,13 +16,12 @@ void functions(stack_t **stack, unsigned int cont, char *function)
 		{"pop", pop},
 		{"pint", pint},
                 {"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
 	while (cm[i].opcode)
 	{
-		if (strcmp(cm[i].opcode, "nop") == 0)
-			break;
 		if ((strcmp(cm[i].opcode, function)) == 0)
 		{
 			cm[i].f(stack, cont);
