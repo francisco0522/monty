@@ -16,7 +16,7 @@ void divMonty(stack_t **head, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if ((*head)->next->n == 0)
+	if ((*head)->next == 0)
 	{
 		dprintf(STDERR_FILENO, "L%d: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
